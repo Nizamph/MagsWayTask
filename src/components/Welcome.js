@@ -6,7 +6,7 @@ const Welcome = () => {
       <img
         src={WelcomeImg}
         alt='MagsWayImage'
-        className='w-[522px]  h-[650px]'
+        className='w-[522px]  h-[700px]'
       />
     </div>
   );

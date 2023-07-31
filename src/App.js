@@ -1,14 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import Welcome from './components/Welcome';
-import JoinUsPage from './components/JoinUs';
+import { RouterProvider } from 'react-router-dom';
+import { appRouter } from './AppLoyout';
 function App() {
-  return (
-    <div className='w-full h-screen flex justify-stretch'>
-      <Welcome />
-      <JoinUsPage />
-    </div>
-  );
+  return <RouterProvider router={appRouter} />;
 }
 
 export default App;

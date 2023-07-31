@@ -4,7 +4,12 @@ import userImg from '../IconsAndImages/user.png';
 import Arrow from '../IconsAndImages/arrow-right.png';
 import Polygon2 from '../IconsAndImages/Polygon 2 (2).png';
 import briefCase from '../IconsAndImages/briefcase.png';
+import { useNavigate } from 'react-router-dom/dist';
 const JoinUsPage = () => {
+  const navigate = useNavigate();
+  const gotoRegistrationPage = () => {
+    navigate('/registration');
+  };
   return (
     <div className='w-7/12 flex flex-col gap-32'>
       <div className='pt-10 text-right'>
@@ -32,16 +37,22 @@ const JoinUsPage = () => {
               className='w-6 h-6 left-3 absolute top-3'
             />
           </div>
-          <div className='flex flex-col gap-2'>
-            <div className='text-black text-base font-medium'>Individual</div>
+          <div
+            className='flex flex-col gap-2 cursor-pointer'
+            onClick={gotoRegistrationPage}>
+            <div className='text-black text-base font-medium'>Individual </div>
             <div className='w-[264px] text-slate-400 text-sm font-normal'>
               Personal account to manage all you activities.
             </div>
           </div>
-          <img
-            src={Arrow}
-            className='w-6 h-6'
-          />
+          <div
+            className='cursor-pointer'
+            onClick={gotoRegistrationPage}>
+            <img
+              src={Arrow}
+              className='w-6 h-6'
+            />
+          </div>
         </div>
         <div className='w-[426px] h-[108px] bg-slate-50 rounded-md shadow border flex items-center gap-2'>
           <div className='relative flex flex-col items-center ml-6'>
@@ -55,7 +66,7 @@ const JoinUsPage = () => {
             />
           </div>
           <div className='flex flex-col gap-2'>
-            <div className='text-black text-base font-medium'>Individual</div>
+            <div className='text-black text-base font-medium'>Business</div>
             <div className='w-[264px] text-slate-400 text-sm font-normal'>
               Personal account to manage all you activities.
             </div>

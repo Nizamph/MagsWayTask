@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import JoinUsPage from './components/JoinUs';
+import Welcome from './components/Welcome';
+import RegistrationPage from './components/RegistrationPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div className='w-full h-screen flex justify-stretch'>
+  <>
     <App />
-  </div>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
